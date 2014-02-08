@@ -1,0 +1,50 @@
+
+body { background: #444 url('img/body-bg.png') repeat; color: #111111; font-family: Georgia,Palatino,serif; line-height: 1 }
+p, li { line-height: 1.3em }
+
+article { width: 70%; margin: 0 auto; border: 1px solid #000; position: absolute; top: 100px }
+article>header {
+    padding: 5px;
+    height: 32px;
+    cursor: move;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: #eee;
+    background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+    background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+}
+article>header .btn-holder { position: absolute; left: 10px; top: 5px; }
+article>header .btn-holder a {
+    text-indent: -9999px;
+    display: inline-block;
+    padding: 3px;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border: 1px #DDDDDE solid;
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+article>header .btn-holder a:hover { opacity: 1 }
+.btn-close { background-image: url('img/close.png') }
+.btn-toggle-vis { background-image: url('img/hide.png') }
+.window-closed .btn-toggle-vis { background-image: url('img/show.png') }
+article>header span { line-height: 32px; font-weight: 700; font-family: 'Helvetica Neue','Helvetica',sans-serif }
+article>section { min-height: 500px; padding: 15px; background-color: #fefefe; }
+
+
+article.window-closed { position: absolute; bottom: 0; left: 10px; top: auto; width: 300px }
+article.window-closed>section { display: none }
+
+article.window-drag { opacity: 0.8 }
